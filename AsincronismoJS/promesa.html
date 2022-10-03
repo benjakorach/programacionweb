@@ -1,0 +1,16 @@
+ <script>
+    var resultado=1;
+    var promesa = new Promise(function(resolve, reject) {
+        if (resultado==1) {
+            resolve("Todo OK");
+        } else {
+            reject(Error("Algo ha fallado"));
+        }
+    });
+
+    promesa.then(function(result) {
+        console.log(result);
+    }, function(err) {
+        console.log(err);
+    });
+ </script>
